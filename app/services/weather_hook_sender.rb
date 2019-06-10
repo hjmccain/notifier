@@ -1,15 +1,9 @@
 class WeatherHookSender
-  def initialize(last_weather, current_weather)
-      @last_weather = last_weather
-      @current_weather = current_weather
-  end
-
   def call
     return  {
-      :last_weather => @last_weather,
-      :current_weather => @current_weather
-    } unless @last_weather == @current_weather
-
-    return nil
+      :zip_10000 => 'quiet',
+      :zip_20000 => 'watch',
+      :zip_30000 => 'warning'
+    }
   end
 end
